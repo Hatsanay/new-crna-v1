@@ -58,10 +58,11 @@ class _regisbodyState extends State<regisbody> {
   String dropdownvalue = 'ผู้ใช้ทั่วไป';
 
   // List of items in our dropdown menu
-  var items = [
-    'ผู้ใช้ทั่วไป',
-    'อู่/ศูนย์',
-    'ช่างอิสระ',
+  int _value = 1;
+  List<ListItem> _dropdownItems = [
+    ListItem(1, "ผู้ใช้ทั่วไป"),
+    ListItem(2, "อู่/ศูนย์"),
+    ListItem(3, "ช่างอิสระ"),
   ];
 
 ////////////////////////
@@ -263,23 +264,23 @@ class _regisbodyState extends State<regisbody> {
     return Container(
       child: DropdownButton(
         // Initial Value
-        value: dropdownvalue,
+        value: _value,
 
         // Down Arrow Icon
         icon: const Icon(Icons.keyboard_arrow_down),
 
         // Array list of items
-        items: items.map((String items) {
-          return DropdownMenuItem(
-            value: items,
-            child: Text(items),
+        items: _dropdownItems.map((ListItem item) {
+          return DropdownMenuItem<int>(
+            child: Text(item.name),
+            value: item.value,
           );
         }).toList(),
         // After selecting the desired option,it will
         // change button value to selected value
-        onChanged: (String? newValue) {
+        onChanged: (value) {
           setState(() {
-            dropdownvalue = newValue!;
+            _value = value!;
           });
         },
       ),
@@ -396,6 +397,12 @@ class _regisbodyState extends State<regisbody> {
       ),
     );
   }
+}
+
+class ListItem {
+  int value;
+  String name;
+  ListItem(this.value, this.name);
 }
 
 final ButtonStyle UserregisButtonStyle = ElevatedButton.styleFrom(
