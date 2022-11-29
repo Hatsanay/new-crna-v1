@@ -4,14 +4,14 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:new_crna_v1/screens/login/components/anthen.dart';
 
-class WelCome extends StatefulWidget {
-  const WelCome({Key? key}) : super(key: key);
+class logscreens extends StatefulWidget {
+  const logscreens({Key? key}) : super(key: key);
 
   @override
-  State<WelCome> createState() => _WelComeState();
+  State<logscreens> createState() => _WelComeState();
 }
 
-class _WelComeState extends State<WelCome> {
+class _WelComeState extends State<logscreens> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

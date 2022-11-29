@@ -35,14 +35,14 @@ class _regisbodyState extends State<regisbody> {
       Fluttertoast.showToast(
         backgroundColor: Colors.orange,
         textColor: Colors.white,
-        msg: 'กรุณากรอกข้อมูลให้ครบถ้วน',
+        msg: 'username ซ้ำ',
         toastLength: Toast.LENGTH_SHORT,
       );
     } else {
       Fluttertoast.showToast(
         backgroundColor: Colors.green,
         textColor: Colors.white,
-        msg: 'Registration Successful',
+        msg: 'สมัครสมาชิกเสร็จสิ้น',
         toastLength: Toast.LENGTH_SHORT,
       );
       Navigator.push(
