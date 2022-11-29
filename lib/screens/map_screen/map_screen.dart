@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:new_crna_v1/constans.dart';
 import 'package:new_crna_v1/screens/home/homescreen.dart';
 import 'package:new_crna_v1/screens/list/list_screen.dart';
-import 'package:new_crna_v1/screens/map_screen/components/googlemap.dart';
+import 'package:new_crna_v1/screens/map_screen/components/body.dart';
 import 'package:new_crna_v1/screens/profile/profile_screen.dart';
 
 //import 'package:flutter_svg/flutter_svg.dart';
@@ -18,9 +18,10 @@ class pinScreen extends StatefulWidget {
 class _HomeScreenState extends State<pinScreen> {
   @override
   Widget build(BuildContext context) {
+    var kNavigationBar;
     return Scaffold(
       appBar: buildAppBar(),
-      // body: MapSample(),
+      body: mapBody(),
       //backgroundColor: kappbar,
       bottomNavigationBar: Container(
         height: 80,
@@ -30,7 +31,7 @@ class _HomeScreenState extends State<pinScreen> {
             BoxShadow(
               offset: const Offset(0, -10),
               blurRadius: 35,
-              color: kNavigationBar.withOpacity(0.38),
+              color: Colors.white.withOpacity(0.38),
             ),
           ],
         ),

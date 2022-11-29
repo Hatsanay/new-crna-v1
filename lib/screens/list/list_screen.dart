@@ -4,8 +4,7 @@ import 'package:new_crna_v1/constans.dart';
 import 'package:new_crna_v1/screens/home/homescreen.dart';
 import 'package:new_crna_v1/screens/list/components/body.dart';
 import 'package:new_crna_v1/screens/map_screen/map_screen.dart';
-
-import '../profile/profile_screen.dart';
+import 'package:new_crna_v1/screens/profile/profile_screen.dart';
 
 //import 'package:flutter_svg/flutter_svg.dart';
 
